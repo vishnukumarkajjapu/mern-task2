@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>JS TASK-4</title>
+</head>
+<body>
+    
+    <button type="button" class="btn btn-primary btn-sm" onclick="mydate()">show date</button><br>
+    <p id="d1"></p><br>
+    <button type="button" class="btn btn-primary btn-sm" onclick="mytime()">show Time</button><br>
+    <p id="d2"></p>
+
+    <script>
+        function mydate()
+        {
+            const d=new Date();
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            document.getElementById("d1").innerHTML=d.getDate()+"/"+months[d.getMonth()]+"/"+d.getFullYear();
+        }
+        function mytime()
+        {
+            const d=new Date();
+            document.getElementById("d2").innerHTML=d;
+        }
+    </script>
+</body>
+</html>
